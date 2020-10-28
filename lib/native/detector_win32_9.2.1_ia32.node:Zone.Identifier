@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/VSChina/serialport.node/releases/tag/downloads
+HostUrl=https://github-production-release-asset-2e65be.s3.amazonaws.com/220414654/5ae00780-186f-11eb-875f-2429fa4572d2?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20201027%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20201027T235124Z&X-Amz-Expires=300&X-Amz-Signature=3acf1d56bb01796f6810b7e39841137c99b41959df3b4b9d9a3023090d625607&X-Amz-SignedHeaders=host&actor_id=1429895&key_id=0&repo_id=220414654&response-content-disposition=attachment%3B%20filename%3Ddetector_win32_9.2.1_ia32.node&response-content-type=application%2Foctet-stream
