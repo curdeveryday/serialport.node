@@ -12,7 +12,7 @@ os:
   - linux
   - osx
   - windows
-dist: trusty
+dist: bionic
 
 before_install:
   - if [ $TRAVIS_OS_NAME == "linux" ]; then
@@ -29,4 +29,4 @@ install:
   - npm install
 
 script:
-  - gulp build --electron="9.2.1" --token="$API_TOKEN" --tag="downloads"
+  - gulp build --electron="11.2.1" --token="$API_TOKEN" --tag="downloads"
