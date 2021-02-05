@@ -17,11 +17,11 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "linux-distro": "^4.0.1",
-    "nan": "^2.14.1",
+    "nan": "^2.14.2",
     "node-gyp": "^7.1.2",
-    "octonode": "^0.9.5",
-    "shelljs": "^0.7.6",
+    "octonode": "^0.10.0",
+    "shelljs": "^0.8.4",
     "simple-git": "^1.65.0",
-    "yargs": "^16.0.3"
+    "yargs": "^16.2.0"
   }
 }
