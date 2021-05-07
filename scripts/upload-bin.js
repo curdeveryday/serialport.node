@@ -15,7 +15,7 @@ const config = {
 
 const bin = cliArgs.TYPE === 'serialport'
             ? path.join(__dirname, '..', 'node_modules', '@serialport', 'bindings', 'build', 'Release', 'bindings.node')
-            : path.join(__dirname, '..', 'node_modules', 'usb-detection', 'build', 'Release', 'bindings.node')
+            : path.join(__dirname, '..', 'node_modules', 'usb-detection', 'build', 'Release', 'detection.node')
 
 let client = new OSS({
     region: config.region,
