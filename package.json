@@ -6,6 +6,7 @@
   "main": "lib/index.js",
   "repository": "https://github.com/VSChina/serialport.node",
   "dependencies": {
+    "ali-oss": "^6.15.2",
     "glob": "^7.1.6",
     "serialport": "^9.0.4",
     "usb-detection": "^4.10.0"

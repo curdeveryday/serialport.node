@@ -1,0 +1,43 @@
+name: serial-builder
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-serialport:
+    name: Build serialport
+    runs-on: [macos-latest, linux-latest, windows-2019]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          npm install -g node-gyp
+          npm ci
+      - name: Build
+        run: |
+          cd node_modules/@serialport/bindings
+          node-gyp rebuild --target=12.0.4 --arch=x64 --dist-url=https://atom.io/download/electron
+      - name: Upload
+        run: |
+          cd ../../..
+          node scripts/upload-bin.js --TYPE=serialport --REGION=${{ secrets.REGION }} --ACCESS_KEY_ID=${{ secrets.ACCESS_KEY_ID }} --ACCESS_KEY_SECRET=${{ secrets.ACCESS_KEY_SECRET }} --BUCKET=${{ secrets.BUCKET }}
+
+  build-detector:
+    name: Build usb-detection
+    runs-on: [macos-latest, linux-latest, windows-2019]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: |
+          npm install -g node-gyp
+          npm ci
+      - name: Build
+        run: |
+          cd node_modules/usb-detection
+          node-gyp rebuild --target=12.0.4 --arch=x64 --dist-url=https://atom.io/download/electron
+      - name: Upload
+        run: |
+          cd ../..
+          node scripts/upload-bin.js --TYPE=detection --REGION=${{ secrets.REGION }} --ACCESS_KEY_ID=${{ secrets.ACCESS_KEY_ID }} --ACCESS_KEY_SECRET=${{ secrets.ACCESS_KEY_SECRET }} --BUCKET=${{ secrets.BUCKET }}
